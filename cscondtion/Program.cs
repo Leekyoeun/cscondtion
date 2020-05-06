@@ -72,6 +72,42 @@ namespace cscondtion
                 default:
                     Console.WriteLine("대체 어디에?");
             }
+            Console.Write("입력: ");
+            String line = Console.ReadLine();
+            if (line.Contains("안녕"))
+            {
+                Console.WriteLine("안녕하세요");
+            }
+            else
+            {
+                Console.WriteLine("인사 안해요?");
+            }
+            ConsoleKeyInfo info= Console.ReadKey();
+            switch (info.Key)
+            {
+                case ConsoleKey.UpArrow:
+                    Console.WriteLine("위로이동");
+                    break;
+                case ConsoleKey.DownArrow:
+                    Console.WriteLine("아래로 이동");
+                    break;
+                case ConsoleKey RightArrow:
+                    Console.WriteLine("오른쪽 이동");
+                    break;
+                case ConsoleKey.LeftArrow:
+                    Console.WriteLine("왼쪽 이동");
+                    break;
+
+                default:
+                    Console.Write("다른 키를 눌렀습니다");
+                    break;
+            }
+            switch (info.KeyChar)
+            {
+                case (char)38:
+                    Console.WriteLine("위로 이동");
+                    break;
+            }
         }
       
     }
